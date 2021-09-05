@@ -11,6 +11,8 @@ let answer4El = document.getElementById('btn4')
 
 let counter = 0
 
+let time = 60 
+
 let questions = [
     {
         question: "this is the question 000",
@@ -46,6 +48,20 @@ let questions = [
     }
 ]
 
+function countdown(){
+
+    var timeInterval = setInterval(function(){
+
+        timerEl.textContent = time
+        time--
+        if(time < 0) {
+            clearInterval(timeInterval)
+            time = 60
+            timerEl.textContent = time
+        }
+    },1000)   
+}
+
 function startQuiz() {
 
     countdown()
@@ -65,30 +81,23 @@ function continueQuestionLoop() {
     answer2El.textContent = questions[counter].b
     answer3El.textContent = questions[counter].c
     answer4El.textContent = questions[counter].d
-    counter++
 }
 
 function handleAnswers() {
 
-    console.log("answer is being handled")
+    if (questions[counter].answer != this.value) {
+        time -= 10
+        timerEl.textContent = time
+    }
+
     if (counter == questions.length) {
         console.log("run showScore() Function")
-    } else  continueQuestionLoop()
+    } else  {
+        counter++
+        continueQuestionLoop()
+    }
 }
 
-function countdown(){
 
-    let time = 3 
-    var timeInterval = setInterval(function(){
-
-        timerEl.textContent = time
-        time--
-        if(time < 0) {
-            clearInterval(timeInterval)
-            time = 60
-            timerEl.textContent = time
-        }
-    },1000)   
-}
 
 buttonEl.addEventListener("click", startQuiz)
