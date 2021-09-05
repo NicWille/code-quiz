@@ -16,6 +16,8 @@ let resetButtonEl = document.getElementById('btn-reset')
 let submitHighscoreButtonEl = document.getElementById('btn-highscore')
 let inputEl = document.getElementById('name')
 
+let listEl =  document.getElementById('list')
+
 let counter = 0
 
 let time = 60 
@@ -124,13 +126,22 @@ function gameOver() {
 }
 
 function saveHighscore() {
-    
+
     if (inputEl.value == "") scores.push({name: 'anon', time: time})
     if (inputEl.value != "") {
         let name = inputEl.value
         scores.push({name: name, time: time})
     }
-    console.log(scores)
+    localStorage.setItem("scores", scores)
+}
+
+function showHighscore() {
+
+    for (let i=0; i<scores.length; i++) {
+        let listitemEl = document.createElement("li")
+        listitemEl.textContent = scores[i].name + " : " + scores[i].time
+        listEl.appendChild(listitemEl)
+    }
 }
 
 function resetQuiz() {
