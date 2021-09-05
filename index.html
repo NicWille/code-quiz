@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>Code Quiz</title>
+</head>
+<body>
+    <header>
+        <p>View Highscores</p>
+        <p>Timer: <span id="timer"></span></p>
+    </header>
+
+    <section id="quiz">
+        <div id="start-page">
+            <h1>Code Quiz</h1>
+            <p>[These are directions and/or explain which technologies were used]</p>
+            <button type="submit" id="btn">Begin Quiz!</button>
+        </div>
+
+
+        <div id="question-page" class="hide">
+            <h2 id="question">Question</h2>
+            <div id="answer-buttons">
+                <button id="btn1">a</button>
+                <button id="btn2">b</button>
+                <button id="btn3">c</button>
+                <button id="btn4">d</button>
+            </div>
+        </div>
+
+    </section>
+    <script src="./assets/code.js"></script>
+</body>
+</html>
