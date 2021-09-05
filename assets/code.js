@@ -13,6 +13,8 @@ let answer4El = document.getElementById('btn4')
 let resultPageEl = document.getElementById('results-page')
 let resultEl = document.getElementById('result')
 let resetButtonEl = document.getElementById('btn-reset')
+let submitHighscoreButtonEl = document.getElementById('btn-highscore')
+let inputEl = document.getElementById('name')
 
 let counter = 0
 
@@ -118,9 +120,21 @@ function gameOver() {
     resultPageEl.classList.remove("hide")
     resultEl.textContent = time
     resetButtonEl.addEventListener("click", resetQuiz)
+    submitHighscoreButtonEl.addEventListener("click", saveHighscore)
+}
+
+function saveHighscore() {
+    
+    if (inputEl.value == "") scores.push({name: 'anon', time: time})
+    if (inputEl.value != "") {
+        let name = inputEl.value
+        scores.push({name: name, time: time})
+    }
+    console.log(scores)
 }
 
 function resetQuiz() {
+
     counter = 0
     time = 60
     resultPageEl.classList.add("hide")
