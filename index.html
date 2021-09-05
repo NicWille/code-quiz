@@ -16,7 +16,7 @@
         <div id="start-page">
             <h1>Code Quiz</h1>
             <p>[These are directions and/or explain which technologies were used]</p>
-            <button type="submit" id="btn">Begin Quiz!</button>
+            <button type="submit" id="btn-start">Begin Quiz!</button>
         </div>
 
 
@@ -28,6 +28,16 @@
                 <button id="btn3" value="c"></button>
                 <button id="btn4" value="d"></button>
             </div>
+        </div>
+
+        <div id="results-page" class="hide">
+            <h2>Results</h2>
+            <p>score: <span id="result"></span></p>
+
+            <input type="text" id="name" name="name" placeholder="Type Name or Initials">
+            <button id="btn-name" type="submit">submit highscore</button> 
+
+            <button id="btn-reset" type="reset">Reset Quiz</button>
         </div>
 
     </section>
