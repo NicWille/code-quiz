@@ -54,10 +54,11 @@ function countdown(){
 
         timerEl.textContent = time
         time--
-        if(time < 0) {
+        if(time < -1) {
             clearInterval(timeInterval)
             time = 60
             timerEl.textContent = time
+            gameOver()
         }
     },1000)   
 }
@@ -88,16 +89,21 @@ function handleAnswers() {
     if (questions[counter].answer != this.value) {
         time -= 10
         timerEl.textContent = time
+    } else {
+        time += 15
+        timerEl.textContent = time
     }
 
-    if (counter == questions.length) {
-        console.log("run showScore() Function")
+    if (counter == questions.length - 1) {
+        gameOver()
     } else  {
         counter++
         continueQuestionLoop()
     }
 }
 
-
+function gameOver() {
+    console.log("game is over")
+}
 
 buttonEl.addEventListener("click", startQuiz)

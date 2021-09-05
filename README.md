@@ -17,7 +17,7 @@ WHEN I answer a question incorrectly
 THEN time is subtracted from the clock✅
 
 WHEN all questions are answered or the timer reaches 0
-THEN the game is over
+THEN the game is over✅
 
 WHEN the game is over
 THEN I can save my initials and score
@@ -44,6 +44,6 @@ Repository follows best practices for file structure and naming conventions.
 
 Repository follows best practices for class/id naming conventions, indentation, high-quality comments, etc.
 
-Repository contains multiple descriptive commit messages.
+Repository contains multiple descriptive commit messages.✅
 
 Repository contains a high-quality README file with description, screenshot, and link to deployed application.
