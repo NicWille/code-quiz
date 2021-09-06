@@ -34,15 +34,15 @@ let questions = [
         answer: "a"
     },
     {
-        question: "thisis the question 111",
-        a: "What did he say!",
+        question: "thisis the question 1",
+        a: "what did he say!",
         b: "answer B",
         c: "answer c",
         d: "answer d",
         answer: "b"
     },
     {
-        question: "thisis the question 222",
+        question: "thisis the question 2",
         a: "answer a",
         b: "answer b",
         c: "answer C",
@@ -50,7 +50,7 @@ let questions = [
         answer: "c"
     },
     {
-        question: "thisis the question 333",
+        question: "thisis the question 3 the [final question]",
         a: "answer a",
         b: "answer b",
         c: "answer c",
