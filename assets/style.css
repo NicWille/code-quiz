@@ -5,3 +5,7 @@ body {
 .hide {
     display: none
 }
+
+.btn-reset {
+    margin-top: 10rem;
+}
