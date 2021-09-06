@@ -4,7 +4,6 @@ let startPageEl = document.getElementById('start-page')
 let startButtonEl = document.getElementById('btn-start')
 
 let highscoreLinkEl = document.getElementById('viewHighscores')
-highscoreLinkEl.addEventListener("click", showHighscore)
 let highscorePageEl = document.getElementById('highscore-page')
 
 let questionPageEl = document.getElementById('question-page')
@@ -159,3 +158,4 @@ function resetQuiz() {
 }
 
 startButtonEl.addEventListener("click", startQuiz)
+highscoreLinkEl.addEventListener("click", showHighscore)
