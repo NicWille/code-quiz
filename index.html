@@ -8,20 +8,21 @@
 </head>
 <body>
     <header>
-        <p><a href="https://nicwille.github.io/code-quiz/highscore">View Highscores</a></p>
+        <p id="viewHighscores">View Highscores</p>
         <p>Timer: <span id="timer"></span></p>
     </header>
 
     <section id="quiz">
         <div id="start-page">
             <h1>Code Quiz</h1>
-            <p>[These are directions and/or explain which technologies were used]</p>
+            <p>For best results: check highscores after doing quiz multiple times </p>
+            <p>Capital answers are correct</p>
             <button type="submit" id="btn-start">Begin Quiz!</button>
         </div>
 
 
         <div id="question-page" class="hide">
-            <h2 id="question">Question</h2>
+            <h2 id="question"></h2>
             <div id="answer-buttons">
                 <button id="btn1" value="a"></button>
                 <button id="btn2" value="b"></button>
@@ -36,7 +37,12 @@
 
             <input type="text" id="name" name="name" placeholder="Type Name or Initials">
             <button id="btn-highscore" type="submit">submit highscore</button> 
+            <button id="btn-reset" type="reset">Reset Quiz</button>
+        </div>
 
+        <div id="highscore-page" class="hide">
+            <h2>Highscores</h2>
+            <ul id="list"></ul>
             <button id="btn-reset" type="reset">Reset Quiz</button>
         </div>
 

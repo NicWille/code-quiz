@@ -1,7 +1,11 @@
 let timerEl = document.getElementById('timer')
 
-let startButtonEl = document.getElementById('btn-start')
 let startPageEl = document.getElementById('start-page')
+let startButtonEl = document.getElementById('btn-start')
+
+let highscoreLinkEl = document.getElementById('viewHighscores')
+highscoreLinkEl.addEventListener("click", showHighscore)
+let highscorePageEl = document.getElementById('highscore-page')
 
 let questionPageEl = document.getElementById('question-page')
 let questionEl = document.getElementById('question')
@@ -19,11 +23,8 @@ let inputEl = document.getElementById('name')
 let listEl =  document.getElementById('list')
 
 let counter = 0
-
 let time = 60 
-
 let scores = []
-
 let questions = [
     {
         question: "this is the question 000",
@@ -132,15 +133,20 @@ function saveHighscore() {
         let name = inputEl.value
         scores.push({name: name, time: time})
     }
-    localStorage.setItem("scores", scores)
 }
 
 function showHighscore() {
+
+    highscorePageEl.classList.remove('hide')
+    startPageEl.classList.add('hide')
+    questionPageEl.classList.add('hide')
+    resultPageEl.classList.add('hide')
 
     for (let i=0; i<scores.length; i++) {
         let listitemEl = document.createElement("li")
         listitemEl.textContent = scores[i].name + " : " + scores[i].time
         listEl.appendChild(listitemEl)
+        console.log(scores[i].name + " : " + scores[i].time)
     }
 }
 

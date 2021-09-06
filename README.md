@@ -1,51 +1,17 @@
 # Code Quiz
 
+## Description
+Its a Proof of Concept for a small quiz, that uses a countdown timer to penalize wrong answers, and gives bonus time for correct answers. the user can save the score in local storage and view a list of the recent highscores paired with the name of the user. ('anon' by default)
+
+## Technologies
+- Javascript
+- Web Api
+- HTML
+- CSS
+
+## Link
 https://nicwille.github.io/code-quiz/
 
-AS A coding boot camp student
-I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
-SO THAT I can gauge my progress compared to my peers
+## Screenshot
 
-
-GIVEN I am taking a code quiz
-
-WHEN I click the start button
-THEN a timer starts and I am presented with a question✅
-
-WHEN I answer a question
-THEN I am presented with another question✅
-
-WHEN I answer a question incorrectly
-THEN time is subtracted from the clock✅
-
-WHEN all questions are answered or the timer reaches 0
-THEN the game is over✅
-
-WHEN the game is over
-THEN I can save my initials and score ✅
-
-
-
-Application deployed at live URL.
-
-Application loads with no errors.
-
-Application GitHub URL submitted.
-
-GitHub repository that contains application code.
-
-Application user experience is intuitive and easy to navigate.
-
-Application user interface style is clean and polished.
-
-Application resembles the mock-up functionality provided in the Challenge instructions.
-
-Repository has a unique name.✅
-
-Repository follows best practices for file structure and naming conventions.
-
-Repository follows best practices for class/id naming conventions, indentation, high-quality comments, etc.
-
-Repository contains multiple descriptive commit messages.✅
-
-Repository contains a high-quality README file with description, screenshot, and link to deployed application.
+![website screenshot](screenshot.png)
