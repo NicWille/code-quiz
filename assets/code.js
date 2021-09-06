@@ -121,7 +121,6 @@ function gameOver() {
     questionPageEl.classList.add("hide")
     resultPageEl.classList.remove("hide")
     resultEl.textContent = time
-    resetButtonEl.addEventListener("click", resetQuiz)
     submitHighscoreButtonEl.addEventListener("click", saveHighscore)
 }
 
@@ -136,6 +135,7 @@ function saveHighscore() {
 
 function showHighscore() {
 
+    highscoreLinkEl.classList.add('hide')
     highscorePageEl.classList.remove('hide')
     startPageEl.classList.add('hide')
     questionPageEl.classList.add('hide')
@@ -153,9 +153,13 @@ function resetQuiz() {
 
     counter = 0
     time = 60
+    highscoreLinkEl.classList.remove('hide')
+    highscorePageEl.classList.add("hide")
     resultPageEl.classList.add("hide")
+    questionPageEl.classList.add('hide')
     startPageEl.classList.remove("hide")
 }
 
 startButtonEl.addEventListener("click", startQuiz)
 highscoreLinkEl.addEventListener("click", showHighscore)
+resetButtonEl.addEventListener("click", resetQuiz)
